@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input dan Tampilan Teks</title>
+<script>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+input {
+    padding: 5px;
+    margin: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#hasil {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.teks-box {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+</script>
+
+</head>
+<body>
+<h1>Masukkan Teks</h1>
+<input type="number" id="jumlahTeks" placeholder="Masukkan jumlah teks">
+<button onclick="tampilkanInput()">Tampilkan</button>
+<div id="hasil"></div>
+
+<script>
+function tampilkanInput() {
+    const jumlah = document.getElementById('jumlahTeks').value;
+    let hasil = document.getElementById('hasil');
+    hasil.innerHTML = '';
+
+    for (let i = 1; i <= jumlah; i++) {
+        let inputBaris = document.createElement('input');
+        inputBaris.type = 'text';
+        inputBaris.classList.add('teks-box');
+        inputBaris.placeholder = 'Masukkan teks ke-' + i;
+        hasil.appendChild(inputBaris);
+    }
+}
+
+
+</script>
+
+</body>
+</html>

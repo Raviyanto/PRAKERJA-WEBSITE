@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menampilkan Teks Berulang Kali</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="text" id="inputText" placeholder="Masukkan teks"><br>
+    <input type="number" id="inputNumber" placeholder="Jumlah kali"><br>
+    <button onclick="tampilkanTeks()">Tampilkan</button>
+    <div id="output"></div>
+</div>
+
+<script>
+    function tampilkanTeks() {
+        var inputText = document.getElementById('inputText').value;
+        var inputNumber = document.getElementById('inputNumber').value;
+        var output = document.getElementById('output');
+
+        if (inputText === "" || inputNumber === "") {
+            output.textContent = "Masukkan teks dan jumlah kali yang valid.";
+            return;
+        }
+
+        output.textContent = "";
+        for (var i = 0; i < inputNumber; i++) {
+            output.textContent += inputText + " ";
+        }
+    }
+</script>
+
+</body>
+</html>

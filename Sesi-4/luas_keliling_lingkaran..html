@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Lingkaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 5px;
+            margin: 10px;
+        }
+        button {
+            padding: 8px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Kalkulator Lingkaran</h1>
+
+<label for="radius">Masukkan jari-jari lingkaran:</label>
+<input type="number" id="radius">
+<button onclick="hitung()">Hitung</button>
+
+<table>
+    <tr>
+        <th>Jari-Jari</th>
+        <th>Luas</th>
+        <th>Keliling</th>
+    </tr>
+    <tr>
+        <td id="jari_jari"></td>
+        <td id="luas"></td>
+        <td id="keliling"></td>
+    </tr>
+</table>
+
+<script>
+    function hitung() {
+        var radius = parseFloat(document.getElementById("radius").value);
+        var luas = Math.PI * radius * radius;
+        var keliling = 2 * Math.PI * radius;
+
+        document.getElementById("jari_jari").textContent = radius;
+        document.getElementById("luas").textContent = luas.toFixed(2);
+        document.getElementById("keliling").textContent = keliling.toFixed(2);
+    }
+</script>
+
+<p>Dalam contoh ini, desain CSS digunakan untuk memberikan tata letak yang menarik pada elemen-elemen halaman web,</p>
+<p>seperti judul, input, tombol, dan tabel. JavaScript digunakan untuk menghitung luas dan keliling lingkaran</p> 
+<p>berdasarkan input jari-jari yang dimasukkan pengguna dan menampilkannya dalam tabel.</p>
+
+</body>
+</html>

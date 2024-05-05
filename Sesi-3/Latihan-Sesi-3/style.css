@@ -1,0 +1,32 @@
+.tulisan_kiri{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.tulisan_kanan{
+    color: orangered;
+    font-size: 24px;
+    font-style: italic;
+    text-align: right;
+    text-transform: capitalize;
+    text-decoration: overline;
+    text-align: right;
+}
+
+.tulisan_tengah{
+    color: aqua;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: line-through;
+    word-spacing: 10px;
+    text-align: center;
+}
+
+.tulisan_justify{
+    text-align: justify;
+}

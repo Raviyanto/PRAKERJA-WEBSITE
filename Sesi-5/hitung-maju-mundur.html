@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tombol Maju Mundur Angka</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        #counter {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button onclick="maju()">Maju</button>
+    <button onclick="mundur()">Mundur</button>
+    <div id="counter">0</div>
+</div>
+
+<script>
+    var counter = 0;
+    var counterElement = document.getElementById('counter');
+
+    function updateCounter() {
+        counterElement.textContent = counter;
+    }
+
+    function maju() {
+        counter++;
+        updateCounter();
+    }
+
+    function mundur() {
+        counter--;
+        updateCounter();
+    }
+</script>
+
+</body>
+</html>
