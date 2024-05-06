@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Display Text with Count</title>
+<title>Tampilkan Sejumlah Teks</title>
 
 <style>
 
-.container {
+.tampilan {
     text-align: center;
     margin-top: 20px;
 }
@@ -17,7 +17,7 @@ input, button {
     padding: 8px;
 }
 
-#output {
+#hasil {
     margin-top: 10px;
     font-size: 20px;
 }
@@ -27,31 +27,31 @@ input, button {
 
 </head>
 <body>
-<div class="container">
-    <input type="text" id="textInput" placeholder="Pesan">
-    <input type="number" id="countInput" placeholder="Berapa Kali">
-    <button onclick="displayText()">Cetak</button>
-    <div id="output"></div>
+<div class="tampilan">
+    <input type="text" id="teksMasuk" placeholder="Pesan">
+    <input type="number" id="hitungMasukan" placeholder="Berapa Kali">
+    <button onclick="cetakTeks()">Cetak</button>
+    <div id="hasil"></div>
 </div>
 
 <script>
 
-function displayText() {
-    const inputText = document.getElementById('textInput').value;
-    const count = document.getElementById('countInput').value;
-    const outputDiv = document.getElementById('output');
-    let outputText = '';
+function cetakTeks() {
+    const masukkanTeks = document.getElementById('teksMasuk').value;
+    const hitung = document.getElementById('hitungMasukan').value;
+    const hasilDiv = document.getElementById('hasil');
+    let hasilTeks = '';
 
-    if (!inputText || !count) {
-        outputDiv.innerHTML = 'Mohon isi kedua input.';
+    if (!masukkanTeks || !hitung) {
+        hasilDiv.innerHTML = 'Mohon isi kedua input.';
         return;
     }
 
-    for (let i = 1; i <= count; i++) {
-        outputText += `${i}. ${inputText}<br>`;
+    for (let i = 1; i <= hitung; i++) {
+        hasilTeks += `${i}. ${masukkanTeks}<br>`;
     }
 
-    outputDiv.innerHTML = outputText;
+    hasilDiv.innerHTML = hasilTeks;
 }
 
 
