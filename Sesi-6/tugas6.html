@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name=""="width=device-width, initial-scale=1.0">
+<title>Paragraf Berubah Warna</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#color-change {
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
+
+
+</head>
+<body>
+<p id="color-change">Ini adalah paragraf yang akan berubah warna.</p>
+
+<script>
+const paragraph = document.getElementById('color-change');
+
+function changeColor() {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16); // Generate random hex color
+  paragraph.style.color = '#' + randomColor;
+}
+
+// Change paragraph color every 2 seconds using setInterval
+setInterval(() => {
+  changeColor();
+}, 2000);
+
+// Change paragraph color after 5 seconds using setTimeout
+setTimeout(() => {
+  paragraph.textContent = 'Warna paragraf akan berubah!'; // Change the text
+  changeColor(); // Change the color immediately
+}, 5000);
+
+</script>
+
+</body>
+</html>
