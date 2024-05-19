@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas 6: Perubahan Warna Paragraf</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#coloredText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<p id="coloredText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Mauris non mauris vitae lorem sagittis pulvinar. Suspendisse scelerisque maximus arcu a hendrerit. 
+    Fusce tristique, augue vitae iaculis rhoncus, lacus dui sagittis ex, finibus rutrum massa libero vel urna.</p>
+
+<script>
+let count = 0;
+
+function changeColor() {
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById('coloredText').style.color = randomColor;
+    
+    count++;
+    
+    if (count % 5 === 0) {
+        clearInterval(interval);
+        setTimeout(() => {
+            interval = setInterval(changeColor, 2000);
+        }, 2000);
+    }
+}
+
+let interval = setInterval(changeColor, 2000);
+
+</script>
+</body>
+</html>
