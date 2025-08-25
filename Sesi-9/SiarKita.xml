@@ -455,7 +455,7 @@ document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
 </header><!-- /header-wrapper -->
 <div style='clear: both;'/>
 <b:section class='top-ads' id='top-ads' showaddelement='yes'>
-  <b:widget id='HTML7' locked='false' title='IKLAN 970 X 90 PX' type='HTML'>
+  <b:widget id='HTML7' locked='false' title='IKLAN 970 X 90 PX' type='HTML' version='1'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglFkRHxQHg2bZYlYFJuR8owv_Ml9CLTPRL5cj75SUxbDuKvqBYtaoUNoxYx5M9nJf2DRt-IiwPv5wPCt545HeZQLH1WA6P7kZjZkJbWSOWTQPUaNTctkxmQi9IoP1qsFZNwm__jiB-WcW_6NQmmQ3wnXbLEmqCoW1QcZjecV4oQS8ib5-xXImW82oqzeI/s970/Run%20Faster%20-%20Large%20Mobile%20Banner.jpeg" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="90" data-original-width="970" height="90" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglFkRHxQHg2bZYlYFJuR8owv_Ml9CLTPRL5cj75SUxbDuKvqBYtaoUNoxYx5M9nJf2DRt-IiwPv5wPCt545HeZQLH1WA6P7kZjZkJbWSOWTQPUaNTctkxmQi9IoP1qsFZNwm__jiB-WcW_6NQmmQ3wnXbLEmqCoW1QcZjecV4oQS8ib5-xXImW82oqzeI/s320/Run%20Faster%20-%20Large%20Mobile%20Banner.jpeg" width="970" /></a></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -683,16 +683,12 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
                       <b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='1'>
                         <b:widget-settings>
                           <b:widget-setting name='showDateHeader'>true</b:widget-setting>
-                          <b:widget-setting name='commentLabel'>comments</b:widget-setting>
-                          <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                          
                           <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                           <b:widget-setting name='authorLabel'>Diposkan oleh</b:widget-setting>
-                          <b:widget-setting name='showCommentLink'>false</b:widget-setting>
-                          <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-                          <b:widget-setting name='showAuthor'>true</b:widget-setting>
-                          <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+                          
                           <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-                          <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                          
                           <b:widget-setting name='timestampLabel'>at</b:widget-setting>
                           <b:widget-setting name='reactionsLabel'/>
                           <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
@@ -1349,7 +1345,9 @@ if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+4);}
      </b:if>
       </h2>
 </b:if>
-
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:include data='post' name='sharethis'/>
+</b:if>
 <data:post.body/>
 </b:if>
 <div class='clear'/> <!-- clear for photos floats -->
@@ -1383,6 +1381,7 @@ var dw='';titles=new Array();titlesNum=0;urls=new Array();timeR=new Array();thum
 
 </div>
   </div>
+<div class='clear'/>
 </b:if> 
 </article>
 </b:includable>

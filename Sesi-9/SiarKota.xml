@@ -14,65 +14,13 @@
 <meta content='#ff5722' name='apple-mobile-web-app-status-bar-style'/>
 <meta content='yes' name='apple-mobile-web-app-capable'/>
 
-<!-- Facebook and WhatsApp Meta Tag Open Graph by igniel.com -->
-<b:if cond='data:view.isHomepage'>
-<b:if cond='data:view.isPost'>
-<b:if cond='data:view.isPage'>
-<b:if cond='data:blog.url'>
-<meta expr:content='data:blog.url' property='og:url'/>
-</b:if>
-<meta expr:content='data:blog.title' property='og:site_name'/>
-<b:if cond='data:blog.pageName'>
-<meta expr:content='data:blog.pageName' property='og:title'/>
-</b:if></b:if></b:if></b:if>
-<meta content='blog' property='og:type'/>
-<b:if cond='data:blog.postImageUrl'>
-<meta expr:content='data:blog.postImageUrl' property='og:image'/>
-<b:else/>
-<b:if cond='data:blog.postImageThumbnailUrl'>
-<meta expr:content='data:blog.postThumbnailUrl' property='og:image'/>
-<b:else/>
-<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc6ESTYGusSdqd8A2FkGBEYP4Xwh07kEuuoWVvNhAv096MqeBdIBVHyB9EJOOrZ7pCvg96R7t9y6JG9cyH8S7j3BLbaGLPOS4zXMT3dXo0P7sTS6S6wNIgCHX_xDt7NfXKiPxDp4tFZHRu05gYjJy0SSW8-Zi6UcqQsM4Cokj7a1OPbvoBR-yUM-YbPH8/s2000/sebuana-high-resolution-logo-color-on-transparent-background.png' property='og:image'/>
-</b:if></b:if>
-<b:if cond='data:blog.metaDescription'>
+<!-- Whatsapp -->
+<title><data:blog.pageName/></title> 
+<meta expr:content='data:post.snippet' name='description'/> 
+<meta expr:content='data:blog.pageTitle' property='og:title'/> 
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/> 
 <meta expr:content='data:blog.metaDescription' property='og:description'/>
-<b:else/>
-<meta expr:content='data:post.snippet' property='og:description'/>
-</b:if>
-<meta expr:content='data:blog.title' property='og:site_name'/>
-<meta content='https://www.facebook.com/106660612706164' property='article:author'/>
-<meta content='https://www.facebook.com/106660612706164' property='article:publisher'/>
-<meta content='106660612706164' property='fb:admins'/>
-<meta content='en_US' property='og:locale'/>
-<meta content='en_GB' property='og:locale:alternate'/>
-<meta content='id_ID' property='og:locale:alternate'/>
-
- <!-- Twitter Card to show thumbnail -->
-<meta content='summary_large_image' name='twitter:card'/>
-<meta content='@glozoverscorner' name='twitter:site'/>
-<meta content='@glozoverscorner' name='twitter:creator'/>
-<b:if cond='data:view.isHomepage'>
-<b:if cond='data:view.isPost'>
-<b:if cond='data:view.isPage'>
-<meta expr:content='data:blog.title' name='twitter:title'/>
-<meta expr:content='data:blog.title' name='twitter:image:alt'/>
-<b:if cond='data:blog.pageName'>
-<meta expr:content='data:blog.pageName' name='twitter:title'/>
-<meta expr:content='data:blog.pageName' name='twitter:image:alt'/>
-</b:if></b:if></b:if></b:if>
-<b:if cond='data:blog.postImageUrl'>
-<meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
-<b:else/>
-<b:if cond='data:blog.postImageThumbnailUrl'>
-<meta expr:content='data:blog.postThumbnailUrl' name='twitter:image'/>
-<b:else/>
-<meta content='data:blog.blogspotFaviconUrl' name='twitter:image'/>
-</b:if></b:if>
-<b:if cond='data:blog.metaDescription'>
-<meta expr:content='data:blog.metaDescription' name='twitter:description'/>
-<b:else/>
-<meta expr:content='data:post.snippet' name='twitter:description'/>
-</b:if>
+<meta expr:content='data:blog.postImageUrl' property='og:image'/>
 
 
 <include expiration='7d' path='*.css'/>
